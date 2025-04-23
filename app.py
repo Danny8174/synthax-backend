@@ -18,3 +18,6 @@ def generate():
     input_text = data.get("input", "")
     result = run_synthax_code(input_text)
     return jsonify({"output": result})
+@app.route("/", methods=["GET"])
+def index():
+    return "Synthax Backend is running!"
