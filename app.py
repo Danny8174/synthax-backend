@@ -15,3 +15,8 @@ def generate():
     input_text = data.get("input", "")  # or data.get("code", "") if frontend sends { code }
     result = run_synthax_code(input_text)
     return jsonify({"output": result})
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Render injects this automatically
+    app.run(host="0.0.0.0", port=port)
