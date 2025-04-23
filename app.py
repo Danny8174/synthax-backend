@@ -10,7 +10,8 @@ if __name__ == "__main__":
 
 @app.route("/", methods=["GET"])
 def index():
-    return "✅ Synthax Backend is running. Use /generate [POST] to send Synthax input."
+    return "✅ Synthax backend is running! Try POST /generate"
+
 
 @app.route("/generate", methods=["POST"])
 def generate():
