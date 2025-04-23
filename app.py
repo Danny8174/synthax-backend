@@ -3,6 +3,10 @@ from synthax_cli import run_synthax_code
 
 app = Flask(__name__)
 
+@app.route("/", methods=["GET"])
+def home():
+    return "Synthax backend is running"
+
 @app.route("/generate", methods=["POST"])
 def generate():
     data = request.get_json()
